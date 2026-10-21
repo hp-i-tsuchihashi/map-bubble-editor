@@ -1,0 +1,17 @@
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+.toolbar { display: flex; gap: 12px; align-items: center; padding: 12px 20px; background: #fff; border-bottom: 1px solid #e5e7eb; }
+.toolbar h1 { font-size: 18px; margin: 0 auto 0 0; }
+.btn { display: inline-block; padding: 8px 14px; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; font-size: 14px; cursor: pointer; text-align: center; color: inherit; }
+.btn:hover { background: #f9fafb; }
+.btn.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+.btn.primary:hover { background: #1d4ed8; }
+.btn.danger { color: #b91c1c; border-color: #fecaca; }
+.main { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+.stage-wrap { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 24px rgba(15, 23, 42, .12); line-height: 0; }
+.panel { width: 280px; display: flex; flex-direction: column; gap: 12px; background: #fff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(15, 23, 42, .08); font-size: 14px; }
+.panel h2 { margin: 0; font-size: 15px; }
+.panel label { display: flex; flex-direction: column; gap: 4px; }
+.panel label.row { flex-direction: row; justify-content: space-between; align-items: center; }
+.panel label.btn { align-items: center; }
+.panel textarea, .panel select { font: inherit; padding: 6px; border: 1px solid #d1d5db; border-radius: 6px; }
+.hint { color: #6b7280; margin: 0; }
