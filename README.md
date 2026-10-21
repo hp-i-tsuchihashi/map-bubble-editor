@@ -1,2 +1,30 @@
-# map-bubble-editor
-Browser-based map bubble editor prototype with draggable speech balloons
+# Map Bubble Editor
+
+地図画像の上にスタイリッシュな吹き出しを自由に配置できる、ブラウザー上のプロトタイプです。
+(React + Vite + TypeScript + react-konva)
+
+## Setup
+
+```bash
+npm install
+npm run dev      # 開発サーバー
+npm run build    # 型チェック + 本番ビルド
+npm run lint
+```
+
+## Features
+
+- 地図画像の読み込み・差し替え (ファイル入力、背景レイヤーとして描画)
+- 吹き出しを複数追加、クリックで選択、マウスでドラッグ移動
+- しっぽの先端を青いハンドルで独立してドラッグ (本体としっぽは1つのパスとして描画され、枠線・影が途切れない)
+- 選択中の吹き出しの背景色・枠色・角丸・ドロップシャドウ・幅/高さ・テキストをリアルタイム編集
+- 吹き出し内に画像を複数挿入、row (横並び) / column (縦並び) を切り替え
+- PNG書き出し (選択ハンドルは除外、元の地図解像度で出力)
+
+## Known limitations
+
+- テキストは単純な折り返しのみで、はみ出す場合は省略される (自動リサイズなし)
+- 画像の配置は等分割・contain 表示のみ。個別の並び替え/削除は不可 (一括クリアのみ)
+- Undo/Redo、保存/読み込み、回転・リサイズ用ハンドルは未対応
+- 大きな地図は表示時に縮小される (書き出しは元サイズ)
+- しっぽは直線の三角形で、本体の4辺のいずれかから出る
